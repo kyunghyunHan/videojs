@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script src="https://web-broadcast.live-video.net/1.6.0/amazon-ivs-web-broadcast.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <div id="video-container" style="width:100%">
+        <video id="video_player" class="video-js vjs-default-skin" autoplay muted playsinline></video>
+    </div>
+    <script>
+        const { Stage, StageEvents, ConnectionState, SubscribeType } = IVSBroadcastClient;
+        let player = videojs('video_player');
+
+    </script>
 </body>
+
 </html>
