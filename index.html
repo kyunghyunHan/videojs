@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="video-container" style="width:100%">
+        <video id="video_player" class="video-js vjs-default-skin" autoplay muted playsinline></video>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        (function (window, videojs) {
+            const examplePlayer = window.examplePlayer = videojs('video_player');
+            examplePlayer.src({
+                src: "video/face1.mp4",
+                // iceServers: '[ { "urls": "stun:stun1.l.google.com:19302" } ]'
+            });
+            examplePlayer.on('ant-error', function (event, errors) {
+                console.log(errors);
+            });
+            examplePlayer.on('ant-error', function (event, errors) {
+                console.log(errors);
+            });
+            examplePlayer.play()
+        }(window, window.videojs));
+
+    </script>
+</body>
+
+</html>
